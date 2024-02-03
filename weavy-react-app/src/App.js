@@ -5,9 +5,9 @@ import WeavyApp from './weavy/WeavyApp';
 import { UserForm } from './weavy/UserForm';
 
 export default class App extends Component {
-  async getJwt() {
-    return '[Provide your JWT here]';
-  }
+  // async getJwt() {
+  //   return '[Provide your JWT here]';
+  // }
 
   render() {
     return (

@@ -1,4 +1,5 @@
 import {Component} from "react";
+import React from "react";
 import axios from "axios";
 
 interface UserProps {
@@ -10,12 +11,6 @@ interface UserState {
     email: string;
     givenName: string;
     middleName: string;
-    name: string;
-    familyName: string;
-    nickName: string;
-    phoneNumber: string;
-    comment: string;
-    picture: string;
 }
 
 export class UserForm extends Component<UserProps, UserState> {
@@ -32,12 +27,6 @@ export class UserForm extends Component<UserProps, UserState> {
             email: "",
             givenName: "",
             middleName: "",
-            name: "",
-            familyName: "",
-            nickName: "",
-            phoneNumber: "",
-            comment: "",
-            picture: ""
         }
         this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
     }
@@ -103,80 +92,6 @@ export class UserForm extends Component<UserProps, UserState> {
                                             onChange={this.handleMessageInputOnChange}
                                         />
                                     </div>
-
-                                    <div className="mt-5">
-                                        <label className="text-xs font-bold">Name</label>
-                                        <input
-                                            className="appearance-none rounded w-11/12 outline-gray-800
-                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
-                                            id="inline-full-name" type="email"
-                                            name={"name"}
-                                            value={this.state.name}
-                                            onChange={this.handleMessageInputOnChange}
-                                        />
-                                    </div>
-
-                                    <div className="mt-5">
-                                        <label className="text-xs font-bold">Family Name</label>
-                                        <input
-                                            className="appearance-none rounded w-11/12 outline-gray-800
-                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
-                                            id="inline-full-name" type="email"
-                                            name={"familyName"}
-                                            value={this.state.familyName}
-                                            onChange={this.handleMessageInputOnChange}
-                                        />
-                                    </div>
-
-                                    <div className="mt-5">
-                                        <label className="text-xs font-bold">Nick Name</label>
-                                        <input
-                                            className="appearance-none rounded w-11/12 outline-gray-800
-                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
-                                            id="inline-full-name" type="email"
-                                            name={"nickName"}
-                                            value={this.state.nickName}
-                                            onChange={this.handleMessageInputOnChange}
-                                        />
-                                    </div>
-
-                                    <div className="mt-5">
-                                        <label className="text-xs font-bold">Phone Number</label>
-                                        <input
-                                            className="appearance-none rounded w-11/12 outline-gray-800
-                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
-                                            id="inline-full-name" type="email"
-                                            name={"phoneNumber"}
-                                            value={this.state.phoneNumber}
-                                            onChange={this.handleMessageInputOnChange}
-                                        />
-                                    </div>
-
-                                    <div className="mt-5">
-                                        <label className="text-xs font-bold">Comment</label>
-                                        <input
-                                            className="appearance-none rounded w-11/12 outline-gray-800
-                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
-                                            id="inline-full-name" type="email"
-                                            name={"comment"}
-                                            value={this.state.comment}
-                                            onChange={this.handleMessageInputOnChange}
-                                        />
-                                    </div>
-
-                                    <div className="mt-5">
-                                        <label className="text-xs font-bold">Picture</label>
-                                        <input
-                                            className="appearance-none rounded w-11/12 outline-gray-800
-                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
-                                            id="inline-full-name" type="file"
-                                            name={"picture"}
-                                            value={this.state.picture}
-                                            onChange={this.handleMessageInputOnChange}
-                                        />
-                                    </div>
-
-                                </div>
 
                                 <button
                                     className="shadow bg-blue-400 w-11/12 text-white hover:bg-blue-900 font-bold py-2 px-4 rounded
