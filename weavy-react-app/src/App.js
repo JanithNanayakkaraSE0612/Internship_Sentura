@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import './App.css';
-
 import Weavy from './weavy/Weavy';
 import WeavyApp from './weavy/WeavyApp';
+import { UserForm } from './weavy/UserForm';
 
 export default class App extends Component {
   async getJwt() {
@@ -11,7 +11,10 @@ export default class App extends Component {
 
   render() {
     return (
-      <Weavy jwt={this.getJwt}>
+      <>
+      
+      
+      {/* <Weavy jwt={this.getJwt}>
         <div className="App">
           <WeavyApp
             spaceKey="react-space"
@@ -20,8 +23,12 @@ export default class App extends Component {
             appName="React Files"
             appType="files"
             />
+
+            
         </div>
-      </Weavy>
+      </Weavy> */}
+        <UserForm/>
+      </>
     );
   }
 }
