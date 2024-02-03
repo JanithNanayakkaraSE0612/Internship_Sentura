@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import './App.css';
-import Weavy from './weavy/Weavy';
-import WeavyApp from './weavy/WeavyApp';
-import { UserForm } from './weavy/UserForm';
+import { UserForm } from '././weavy/UserForm.tsx';
+
 
 export default class App extends Component {
   // async getJwt() {
