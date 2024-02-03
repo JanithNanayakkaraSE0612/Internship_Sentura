@@ -11,6 +11,8 @@ interface UserState {
     email: string;
     givenName: string;
     middleName: string;
+    phoneNumber: string;
+    
 }
 
 export class UserForm extends Component<UserProps, UserState> {
@@ -20,13 +22,14 @@ export class UserForm extends Component<UserProps, UserState> {
 
     constructor(props: any) {
         super(props);
-        this.api = axios.create({baseURL: `https://87bf6c8a4f5442b68f1c8915bd1d3f42.weavy.io/api/post`});
+        this.api = axios.create({baseURL: `https://87bf6c8a4f5442b68f1c8915bd1d3f42.weavy.io/api/`});
         this.accessToken = "wys_3N7jqRtakTENfWF8eXqjEtsHd9Qp9C4HGEOK";
         this.state = {
             user_id: "",
             email: "",
             givenName: "",
             middleName: "",
+            phoneNumber: ""
         }
         this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
     }
@@ -93,6 +96,26 @@ export class UserForm extends Component<UserProps, UserState> {
                                         />
                                     </div>
 
+                                   
+
+                                  
+
+                                  
+                                    <div className="mt-5">
+                                        <label className="text-xs font-bold">Phone Number</label>
+                                        <input
+                                            className="appearance-none rounded w-11/12 outline-gray-800
+                                            focus:outline-blue-400 text-[16px] p-2 border-2 border-gray-300"
+                                            id="inline-full-name" type="email"
+                                            name={"phoneNumber"}
+                                            value={this.state.phoneNumber}
+                                            onChange={this.handleMessageInputOnChange}
+                                        />
+                                    </div>
+
+                    
+                                </div>
+
                                 <button
                                     className="shadow bg-blue-400 w-11/12 text-white hover:bg-blue-900 font-bold py-2 px-4 rounded
                                 text-[16px] mt-5"
@@ -132,12 +155,7 @@ export class UserForm extends Component<UserProps, UserState> {
                     email: this.state.email,
                     givenName: this.state.givenName,
                     middleName: this.state.middleName,
-                    name: this.state.name,
-                    familyName: this.state.familyName,
-                    nickName: this.state.nickName,
                     phoneNumber: this.state.phoneNumber,
-                    comment: this.state.comment,
-                    picture: this.state.picture,
                 },
                 {
                     headers: {
