@@ -1,7 +1,7 @@
 import { Weavy } from 'weavy-js';
 
 const weavy = new Weavy({
-  appKey: '',
+  appKey: 'wys_7RqZlPxycruoitgvY8vfw9amgctP0q1lDe00',
 });
 
 async function createUser() {
